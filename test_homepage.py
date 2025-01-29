@@ -20,8 +20,10 @@ class Test_Home(Baseclass):
         log.info("Gender selected: "+data["gender"])
         home.get_radio().click()
         log.info("Radio button selected")
+        log.info("The page post radio button is")
         home.get_submit().click()
         log.info("Submit button clicked")
+        log.info("The page post submit button is")
         message_conf = home.get_alert_text().text
         log.info("Alert message captured is:" + message_conf)
         self.driver.refresh()
@@ -29,6 +31,7 @@ class Test_Home(Baseclass):
         log.info("Page refreshed")
         log.info("Test completed")
         log.info("Test completed!!!")
+
 
 
     @pytest.fixture(params=home1.get_data())

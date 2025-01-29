@@ -39,4 +39,5 @@ class Test_First(Baseclass):
         text_match = confirm.get_text().text
         log.info("Text received: " + text_match)
         assert "Thank you!" in text_match
+        log.info("Test completed")
 
