@@ -27,6 +27,8 @@ class Test_Home(Baseclass):
         self.driver.refresh()
         assert "Success" in message_conf
         log.info("Page refreshed")
+        log.info("Test completed")
+        log.info("Test completed!!!")
 
 
     @pytest.fixture(params=home1.get_data())
