@@ -40,4 +40,7 @@ class Test_First(Baseclass):
         log.info("Text received: " + text_match)
         assert "Thank you!" in text_match
         log.info("Test completed")
+        self.driver.refresh()
+        log.info("Page refreshed")
+        log.info("Assertion passed")
 

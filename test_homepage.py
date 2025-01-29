@@ -36,7 +36,9 @@ class Test_Home(Baseclass):
         log.info("Page refreshed")
         log.info("Test completed")
         log.info("Test completed!!!")
-
+        self.driver.refresh()
+        log.info("Page refreshed")
+        log.info("Assertion passed")
 
 
     @pytest.fixture(params=home1.get_data())
