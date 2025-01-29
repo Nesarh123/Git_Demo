@@ -2,6 +2,9 @@ from selenium.webdriver.common.by import By
 from utilities.Baseclass import Baseclass
 from Page_Objects.HomePage import Home
 
+from conftest import driver
+
+
 class Test_First(Baseclass):
     def test_first(self):
         log = self.get_logger()
@@ -43,4 +46,8 @@ class Test_First(Baseclass):
         self.driver.refresh()
         log.info("Page refreshed")
         log.info("Assertion passed")
+        driver.close()
+        log.info("Driver closed")
+        driver.quit()
+        log.info("Driver quit")
 
